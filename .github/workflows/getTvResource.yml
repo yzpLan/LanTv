@@ -1,6 +1,8 @@
 name: GET RESOURCE
 run-name: ${{ github.actor }} is to get resouece
-on: [push]
+on:
+    schedule:
+      - cron: */5 * * * *
 env:
      TZ: Asia/Shanghai
 jobs:
