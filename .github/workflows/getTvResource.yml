@@ -2,7 +2,7 @@ name: GET RESOURCE
 run-name: ${{ github.actor }} is to get resouece
 on:
     schedule:
-      - cron: '*/5 * * * *'
+      - cron: '30 17 * * *'
 env:
      TZ: Asia/Shanghai
 jobs:
