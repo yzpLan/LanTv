@@ -19,6 +19,8 @@ jobs:
             rm -f LanTv.m3u && wget https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u -O LanTv.m3u
          - name: Clean   
            run: |
+            git config --local user.email "yzp@qq.com"
+            git config --local user.name "yzp"
             git add -A
             git commit -am "${{ steps.date.outputs.date }}"
          - name: Push
