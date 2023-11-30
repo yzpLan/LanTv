@@ -19,15 +19,10 @@ jobs:
             rm -f LanTv.m3u && wget https://raw.githubusercontent.com/fanmingming/live/main/tv/m3u/ipv6.m3u -O LanTv.m3u
          - name: Clean   
            run: |
-            git config --local user.email "github-actions[bot]@users.noreply.github.com"
-            git config --local user.name "github-actions[bot]"
-            git checkout --orphan latest_branch
             git add -A
             git commit -am "${{ steps.date.outputs.date }}"
-            git branch -D Files
-            git branch -m Files
          - name: Push
-           run: git push -f origin Files
+           run: git push
 
            
 
